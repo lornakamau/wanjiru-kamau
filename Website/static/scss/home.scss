@@ -1,6 +1,36 @@
-h3 {
-    font-family: HelveticaNeueLTStd,sans-serif;
-    // width: 100%;
-    font-size: 1.4rem;
-    letter-spacing: -.01em;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nanum+Myeongjo&family=Playfair+Display&display=swap');
+#landing {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  .landing-logo {
+    position: absolute;
+    left: 2rem;
+    bottom: 10vh;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 12px;
+  }
+  .landing-middle {
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: -4px;
+    font-weight: 50;
+    position: absolute;
+    color: #BF0603;
+    font-size: 20vh;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .landing-about {
+    position: absolute;
+    left: 80vw;
+    right: 2rem;
+    bottom: 20vh;
+    text-align: right;
+    font-size: 12px;
+  }
 }

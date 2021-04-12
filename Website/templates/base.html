@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% if title %}
+		<title>Lorna Kamau| {{title}}</title>
+		{% else %}
+		<title> Lorna Kamau </title>
+		{% endif %}
+		<meta name="description" content="A website for Lorna Wanjiru Kamau" />
+		<meta name="keywords" content="nairobi based, Lorna Kamau, Wanjiru Kamau" />
+		<meta name="author" content="Lorna Kamau" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script> -->
+		{% block styles %}
+		{% endblock %}
+	</head>
+	<body class="loading"> 
+		{% block content %}
+         {%endblock%}
+		{% block scripts %}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'main.js' %}"></script>
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "wanjirukamau",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "-": "0.0.1",
+    "install": "^0.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.0",
+    "@babel/preset-react": "^7.12.13",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "countup.js": "^2.0.7",
+    "css-loader": "^5.0.2",
+    "gsap": "^3.6.0",
+    "imagesloaded": "^4.1.4",
+    "locomotive-scroll": "^4.1.0",
+    "mini-css-extract-plugin": "^1.3.8",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.24.0",
+    "webpack-bundle-tracker": "^1.0.0-alpha.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "start": "nodemon -w webpack.config.js -x webpack serve --hot",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lorna Wanjiru Kamau",
+  "license": "ISC"
+}

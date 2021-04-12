@@ -1,0 +1,6 @@
+.setup.md
+virtual
+__pycache__
+node_modules
+*sqlite3
+dist

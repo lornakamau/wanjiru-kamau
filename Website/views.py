@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from .email import send_request
+from django.template.loader import render_to_string
+
 def home(request):       
     return render(request, "home.html")
 
@@ -17,14 +19,14 @@ def contact(request):
         
         send_mail("LornA EMAIL", message, email, [settings.EMAIL_HOST_USER], fail_silently=False)
         # return render(request, 'contact.html', {'recepient': fullname})
-        # email_template = render_to_string('email/confirmation.html', {'name': name})
-        # email = EmailMessage(
-        #     'Thank you for contacting Wanjiru Kamau',
-        #     email_template,
-        #     settings.EMAIL_HOST_USER,
-        #     [sender_email],        
-        # )
-        # email.fail_silently = False
-        # email.send()
-        print(email, fullname, interest, message)
+        email_template = render_to_string('confirmation.html', {'name': fullname})
+        email = EmailMessage(
+            'Thank you for contacting Wanjiru Kamau',
+            email_template,
+            settings.EMAIL_HOST_USER,
+            [email],        
+        )
+        email.fail_silently = False
+        email.send()
+        # print(email, fullname, interest, message)
     return render(request, "contact.html")

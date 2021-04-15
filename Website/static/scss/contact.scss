@@ -1,0 +1,15 @@
+#contact {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  .contact-left {
+    position: absolute;
+    left: 2rem;
+    bottom: 20vh;
+    transform: rotate(-90deg);
+    font-size: 8px;
+    a {
+      margin-right: 0.8rem;
+    }
+  }
+}

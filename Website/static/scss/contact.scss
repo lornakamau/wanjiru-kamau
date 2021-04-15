@@ -12,4 +12,66 @@
       margin-right: 0.8rem;
     }
   }
+  .contact-right {
+    position: absolute;
+    left: 50%;
+    top: 4rem;
+    width: 40%;
+    padding: 2rem;
+    // background-color: yellow;
+    h1 {
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: -4px;
+      font-weight: 50;
+      color: #bf0603;
+      font-size: 15vh;
+    }
+    form {
+      margin-bottom: 2rem;
+      label {
+        font-size: 14px;
+      }
+
+      .custom-floatingLabel {
+        line-height: 1.5rem;
+        padding: 1rem 0.75rem;
+        position: relative;
+      }
+      .custom-floatingLabel > label {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.75rem;
+      }
+      .custom-float:focus-within {
+        .custom-floatingLabel > label {
+            opacity: 0.6;
+          transform-origin: 0 0;
+          transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+          transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+        }
+      }
+      .form-label {
+        margin-bottom: 1.5rem;
+      }
+      .form-control {
+        outline: none !important;
+        border: 0;
+        box-shadow: none !important;
+        border-bottom: 1px solid #ced4da;
+        appearance: none;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        ::-webkit-scrollbar {
+          width: 6px;
+          background: transparent;
+          background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: transparent !important;
+        }
+      }
+    }
+  }
 }

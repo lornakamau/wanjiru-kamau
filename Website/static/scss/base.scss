@@ -1,5 +1,6 @@
 @import "./home.scss";
 @import "./contact.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nanum+Myeongjo&family=Playfair+Display&display=swap');
 *,
 *::after,
 *::before {
@@ -17,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #BF0603 !important;
+  background: #ced4da;
 }
 
 body {

@@ -23,46 +23,52 @@
     </a>
   </div>
   <div class="contact-right">
-    <h1>contact</h1>    
-    <form>
+    <h1>contact</h1>   
+    {% if recepient %}
+		<title> {{recepient}} | Wanjiru Kamau</title>
+		{% else %}
+		<title>Wanjiru Kamau</title>
+		{% endif %} 
+    <form action="" method="post" onsubmit="myButton.disabled = true; return true;">
+      {% csrf_token %}
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off" autofill="off">
+        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" autocomplete="off" autofill="off" required>
         <label for="floatingInput">Email address</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="First Name" autocomplete="off" autofill="off">
+        <input type="text" class="form-control" name="firstname" id="floatingPassword" placeholder="First Name" autocomplete="off" autofill="off" required>
         <label for="floatingPassword">First Name</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name" autocomplete="off" autofill="off">
+        <input type="text" class="form-control" name="lastname" id="floatingPassword" placeholder="Last Name" autocomplete="off" autofill="off" required>
         <label for="floatingPassword">Last Name</label>
       </div>
       <div class="mb-3 custom-float1" id="custom-float1">
         <div class="custom-floatingLabel"><label for="exampleRadios1" class="form-label" id="custom-floatingRadioLabel">Interested in:</label></div>
         <div class="form-check mt-3">
-          <input class="form-check-input" type="radio" name="interests" id="exampleRadios1" value="option1">
+          <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="1" required>
           <label class="form-check-label" for="exampleRadios1">
             Web Design
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="interests" id="exampleRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="2">
           <label class="form-check-label" for="exampleRadios2">
             UI/UX design
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="interests" id="exampleRadios3" value="option3">
+          <input class="form-check-input" type="radio" name="interest" id="exampleRadios3" value="3">
           <label class="form-check-label" for="exampleRadios3">
             Something
           </label>
         </div>
       </div>
-      <div class="mb-3 custom-float" >
+      <div class="mb-3 custom-float">
         <div class="custom-floatingLabel"><label for="exampleFormControlTextarea1" class="form-label">Message</label></div>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="message" required></textarea>
       </div>
-      <button class="btn">Submit</button>
+      <button class="btn" type="submit" name="myButton" value="button">Submit</button>
     </form>
   </div>
 </div>

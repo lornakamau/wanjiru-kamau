@@ -51,12 +51,16 @@
     }
     form {
       margin-bottom: 2rem;
-      .form-check-input{
-          box-shadow: none;
+      .form-check-input {
+        box-shadow: none;
+        margin-top: 0em;
         &:checked {
-            background-color: #bf0603;
-            border-color: #bf0603;
-          }
+          background-color: #bf0603;
+          border-color: #bf0603;
+        }
+      }
+      .form-check-label {
+        align-self: center;
       }
       label {
         font-size: 14px;

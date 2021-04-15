@@ -1,11 +1,29 @@
 #contact {
+  $form-check-input-checked-color: #bf0603 !default;
   height: 100vh;
   position: relative;
   margin: 0;
-  .contact-left {
-    position: absolute;
+  .contact-left-top {
+    position: fixed;
     left: 2rem;
-    bottom: 20vh;
+    top: 40vh;
+    font-size: 10px;
+    p {
+      line-height: 1.5rem;
+      &::before {
+        content: "---------- ";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -1px;
+        margin: 0 0.75rem 0 0;
+      }
+    }
+  }
+  .contact-left-bottom {
+    position: fixed;
+    left: 2rem;
+    bottom: 15vh;
+    transform-origin: 0 0;
     transform: rotate(-90deg);
     font-size: 8px;
     a {
@@ -14,44 +32,74 @@
   }
   .contact-right {
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 4rem;
     width: 40%;
-    padding: 2rem;
-    // background-color: yellow;
+    padding: 0rem 2rem 2rem;
     h1 {
       font-family: "Nanum Myeongjo", serif;
       letter-spacing: -4px;
       font-weight: 50;
       color: #bf0603;
       font-size: 15vh;
+      margin-bottom: 1rem;
+    }
+    p.text-muted {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      // font-weight: 400;
     }
     form {
       margin-bottom: 2rem;
+      .form-check-input{
+          box-shadow: none;
+        &:checked {
+            background-color: #bf0603;
+            border-color: #bf0603;
+          }
+      }
       label {
         font-size: 14px;
       }
-
       .custom-floatingLabel {
         line-height: 1.5rem;
         padding: 1rem 0.75rem;
         position: relative;
       }
       .custom-floatingLabel > label {
+        opacity: 1;
         position: absolute;
         top: 0.5rem;
         left: 0.75rem;
+        transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
       }
       .custom-float:focus-within {
         .custom-floatingLabel > label {
-            opacity: 0.6;
+          opacity: 0.6;
           transform-origin: 0 0;
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
         }
       }
-      .form-label {
-        margin-bottom: 1.5rem;
+      .custom-float1:hover {
+        .custom-floatingLabel > label {
+          opacity: 0.6;
+          transform-origin: 0 0;
+          transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+          transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+        }
+      }
+      .float-custom-label {
+        opacity: 0.6;
+        transform-origin: 0 0;
+        transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+        transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+      }
+      .unfloat-custom-label {
+        opacity: 0.6;
+        transform-origin: 0 0;
+        transform: scale(1) translateY(0.5rem) translateX(-0.15rem);
+        transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
       }
       .form-control {
         outline: none !important;
@@ -70,6 +118,17 @@
 
         ::-webkit-scrollbar-thumb {
           background: transparent !important;
+        }
+      }
+      .btn {
+        margin-top: 1rem;
+        font-size: 14px;
+        color: #bf0603;
+        border-color: #bf0603;
+        text-transform: uppercase;
+        &:hover {
+          color: #fff;
+          background-color: #bf0603;
         }
       }
     }

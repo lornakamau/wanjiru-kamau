@@ -27,3 +27,7 @@ def contact(request):
         email.fail_silently = False
         email.send()
     return render(request, "contact.html")
+
+
+def about(request):       
+    return render(request, "about.html")

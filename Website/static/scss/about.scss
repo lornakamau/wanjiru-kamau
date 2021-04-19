@@ -1,52 +1,48 @@
 #about {
-  height: 100vh;
   position: relative;
   margin: 0;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  .contained {
+    max-width: 90vw;
+    padding-left: 4rem;
+  }
   h1 {
     font-family: "Nanum Myeongjo", serif;
     letter-spacing: -4px;
     font-weight: 50;
-    color: #bf0603;
     font-size: 15vh;
     margin-bottom: 1rem;
-    text-align: center;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: left;
+    text-transform: uppercase;
   }
-  h2 {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-family: "Nanum Myeongjo", serif;
-    letter-spacing: -4px;
-    font-weight: 50;
+  .inner-text {
     color: #bf0603;
-    font-size: 8vh;
-    text-align: center;
-    cursor: pointer;
-    &:after, &:before {
-        text-align : center;
-        margin: 0 1rem;
-        content: "—";
-        bottom: 3rem;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    }
-  }
-  .center-aligned {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -40%);
+    margin-top: auto;
+    margin-bottom: auto;
     line-height: 1.2rem;
-    text-align: justify;
-    font-size: 14px;
-    .mb-5 {
-      margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  .more-about {
+    line-height: 1.5rem;
+  }
+  .socials {
+    padding-left: 4rem;
+    margin-top: 2rem;
+    .social-head {
+      color: #bf0603;
     }
-    .d-flex {
-      div:first-child {
-        margin-right: 2rem;
+    a {
+      color: inherit;
+      &:hover {
+        color: #bf0603;
+        transition: color 0.2s ease-in-out;
       }
+    }
+    span {
+      margin-right: 0.5rem;
     }
   }
 }

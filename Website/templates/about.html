@@ -1,29 +1,47 @@
 {%extends 'base.html'%} {% load static %} {% block content %}
 <div class="container-fluid" id="about">
-  <div class="center-aligned">
-    <h1 class="page-title">about</h1>
-    <div class="d-flex justify-content-start align-content-center mb-5">
-      <div>SKILLS</div>
-      <div>HTML / CSS / SASS / SCSS / JavaScript / Photoshop / Illustrator</div>
+  <div class="row contained">
+    <div class="col-sm-12">
+      <h1>I'M Wanjiru <br> A kenyan front end</h1>
     </div>
-    <div class="d-flex justify-content-center align-content-center">
-      <div>HELLO</div>
-      <div>
-        MY NAME IS LORNA KAMAU. I'VE BEEN STUDYING WEB DESIGN AND FRONT-END
-        SINCE SEPTEMBER 2020. MY GOAL IS TO BE A DESIGNER AND ENGINEER WHO CAN
-        CONTRIBUTE TO OTHERS. BASICALLY I LIKE CREATING COOL DESIGN. I'M NEW AND
-        INEXPERIENCED BUT I'LL DO MY BEST. THANKS FOR YOUR TIME.
-        MY NAME IS LORNA KAMAU. I'VE BEEN STUDYING WEB DESIGN AND FRONT-END
-        SINCE SEPTEMBER 2020. MY GOAL IS TO BE A DESIGNER AND ENGINEER WHO CAN
-        CONTRIBUTE TO OTHERS. BASICALLY I LIKE CREATING COOL DESIGN. I'M NEW AND
-        INEXPERIENCED BUT I'LL DO MY BEST. THANKS FOR YOUR TIME.
-        MY NAME IS LORNA KAMAU. I'VE BEEN STUDYING WEB DESIGN AND FRONT-END
-        SINCE SEPTEMBER 2020. MY GOAL IS TO BE A DESIGNER AND ENGINEER WHO CAN
-        CONTRIBUTE TO OTHERS. BASICALLY I LIKE CREATING COOL DESIGN. I'M NEW AND
-        INEXPERIENCED BUT I'LL DO MY BEST. THANKS FOR YOUR TIME.
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-md-3 d-flex">
+          <p class="inner-text">I STRIVE TO DEVELOP A THOUGHTFUL,
+            FUNCTIONAL AND AESTHETIC DESIGN,
+            BASED ON A STRATEGIC APPROACH.</p>
+        </div>
+        <div class="col-md-9">
+          <h1>developer <br>
+            I FOCUS MY WORK ON  </h1>
+        </div>
       </div>
     </div>
+    <div class="col-sm-12">
+      <h1>BRANDING AND <br> INTERFACE DESIGN.</h1>
+    </div>
   </div>
-  <a href="{% url 'contact' %}"><h2 class="page-end">let's work together</h2></a>
+  <div class="row contained">
+    <div class="col-md-5"></div>
+    <div class="col-md-7 more-about">
+      <p>
+        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
+      </p><br>
+      <p>
+        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
+      </p><br>
+      <p>
+        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
+      </p>
+    </div>
+  </div>
+  <div class="row socials">
+    <div class="col-sm-12 d-flex">
+      <span class="social-head">find me</span>
+      <a href="#" target="_blank" rel="noopener noreferrer"><span>nstgrm.</span></a>
+      <a href="#" target="_blank" rel="noopener noreferrer"><span>lnkdn.</span></a>
+      <a href="#" target="_blank" rel="noopener noreferrer"><span>gthub.</span></a>
+    </div>
+  </div>
 </div>
 {%endblock%}

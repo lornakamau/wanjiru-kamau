@@ -25,12 +25,23 @@ module.exports = {
               }
             }
           },
+          // {
+          //   test: /\.(jpg|png)$/,
+          //   use: {
+          //     loader: 'url-loader',
+          //   },
+          // },
           {
-            test: /\.(jpg|png)$/,
-            use: {
-              loader: 'url-loader',
-            },
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
           },
+          // {
+          //   test: /\.(jpe?g|png|gif|svg)$/i, 
+          //   loader: 'file-loader',
+          //   options: {
+          //     name: '/public/icons/[name].[ext]'
+          //   }
+          // }
         ],
     },
     resolve: {

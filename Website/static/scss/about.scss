@@ -1,104 +1,105 @@
-#about {
-  position: relative;
-  margin: 0;
-  padding-top: 12vh;
-  padding-bottom: 10vh;
-  .contained {
-    padding-left: 4rem;
-    height: 80vh;
-  }
-  .image-container {
-    .about-image {
-      width: 70vw;
-      object-fit: cover;
-      margin: 1rem 0;
-      filter: grayscale(100%);
-    }
-    // &:hover {
-    //   .about-image {
-    //     filter: grayscale(0%);
-    //   }
-    // }
-  }
-  h1 {
-    font-family: "Nanum Myeongjo", serif;
-    letter-spacing: -4px;
-    font-weight: 50;
-    margin-bottom: 1rem;
-    font-size: 12vh;
-    line-height: 4.4rem;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  .inner-text {
-    color: #bf0603;
-    margin-top: auto;
-    margin-bottom: auto;
-    line-height: 1.2rem;
-    text-transform: uppercase;
-  }
-  .more-about {
-    line-height: 1.5rem;
-  }
+// #about {
+//   position: relative;
+//   margin: 0;
+//   padding-top: 12vh;
+//   padding-bottom: 10vh;
+//   .contained {
+//     padding-left: 4rem;
+//     height: 80vh;
+//   }
+//   .image-container {
+//     .about-image {
+//       width: 70vw;
+//       object-fit: cover;
+//       margin: 1rem 0;
+//       filter: grayscale(100%);
+//     }
+//     &:hover {
+//       .about-image {
+//         filter: grayscale(0%);
+//       }
+//     }
+//   }
+//   h1 {
+//     font-family: "Nanum Myeongjo", serif;
+//     letter-spacing: -4px;
+//     font-weight: 50;
+//     margin-bottom: 1rem;
+//     font-size: 12vh;
+//     line-height: 4.4rem;
+//     text-align: left;
+//     text-transform: uppercase;
+//   }
+//   .inner-text {
+//     color: #bf0603;
+//     margin-top: auto;
+//     margin-bottom: auto;
+//     line-height: 1.2rem;
+//     text-transform: uppercase;
+//   }
+//   .more-about {
+//     line-height: 1.5rem;
+//   }
 
-  .about-end {
-    position: relative;
-    padding: 4rem 0;
-    h2 {
-      font-family: "Nanum Myeongjo", serif;
-      letter-spacing: -4px;
-      font-weight: 50;
-      margin-bottom: 1rem;
-      font-size: 10vh;
-      line-height: 4.4rem;
-      text-align: center;
-      text-transform: uppercase;
-      position: relative;
-      margin-bottom: 5rem;
-      // color: rgba(0, 0, 0, 0.55);
-      span {
-        font-style: italic;
-        margin-top: 2rem;
-        &::after {
-          position: absolute;
-          content: "";
-          width: 0%;
-          transition: width 0.4s;
-          transition-timing-function: ease-in-out;
-          height: 0;
-          background: #bf0603;
-          top: 100%;
-          left: 50%;
-          pointer-events: none;
-          margin-top: 1rem;
-          transform: translateX(-50%);
-        }
-      }
-      &:hover {
-        span:after {
-          height: 2px;
-          width: 30%;
-          opacity: 1;
-        }
-      }
-    }
+//   .about-end {
+//     position: relative;
+//     padding: 4rem 0;
+//     h2 {
+//       font-family: "Nanum Myeongjo", serif;
+//       letter-spacing: -4px;
+//       font-weight: 50;
+//       margin-bottom: 1rem;
+//       font-size: 10vh;
+//       line-height: 4.4rem;
+//       text-align: center;
+//       text-transform: uppercase;
+//       position: relative;
+//       margin-bottom: 5rem;
+//       // color: rgba(0, 0, 0, 0.55);
+//       span {
+//         font-style: italic;
+//         margin-top: 2rem;
+//         &::after {
+//           position: absolute;
+//           content: "";
+//           width: 0%;
+//           transition: width 0.4s;
+//           transition-timing-function: ease-in-out;
+//           height: 0;
+//           background: #bf0603;
+//           top: 100%;
+//           left: 50%;
+//           pointer-events: none;
+//           margin-top: 1rem;
+//           transform: translateX(-50%);
+//         }
+//       }
+//       &:hover {
+//         span:after {
+//           height: 2px;
+//           width: 30%;
+//           opacity: 1;
+//         }
+//       }
+//     }
 
-    .socials {
-      margin-top: 4rem;
-      padding-left: 4rem;
-      .social-head {
-        color: #bf0603;
-      }
-      a {
-        color: inherit;
-        &:hover {
-          color: #bf0603;
-          transition: color 0.2s ease-in-out;
-        }
-      }
-      span {
-        margin-right: 0.5rem;
-      }
-    }
-  }
-}
+//     .socials {
+//       margin-top: 4rem;
+//       padding-left: 4rem;
+//       .social-head {
+//         color: #bf0603;
+//       }
+//       a {
+//         color: inherit;
+//         &:hover {
+//           color: #bf0603;
+//           transition: color 0.2s ease-in-out;
+//         }
+//       }
+//       span {
+//         margin-right: 0.5rem;
+//       }
+//     }
+//   }
+// }
+

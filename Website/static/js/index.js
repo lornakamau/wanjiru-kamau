@@ -5,6 +5,10 @@ import image3 from '../img/3.jpg';
 import image4 from '../img/4.jpg';
 import image5 from '../img/5.jpg';
 import image6 from '../img/6.jpg';
+import image7 from '../img/7.jpg';
+import image8 from '../img/8.jpg';
+import image9 from '../img/9.jpg';
+import image10 from '../img/10.jpg';
 import Revealer from './revealer';
 import { gsap } from 'gsap';
 //auto position images
@@ -72,6 +76,10 @@ document.getElementById('image3').src = image3;
 document.getElementById('image4').src = image4;
 document.getElementById('image5').src = image5;
 document.getElementById('image6').src = image6;
+document.getElementsByClassName('project-image')[0].style.backgroundImage = `url(${image7})`;
+document.getElementsByClassName('project-image')[1].style.backgroundImage = `url(${image8})`;
+document.getElementsByClassName('project-image')[2].style.backgroundImage = `url(${image9})`;
+document.getElementsByClassName('project-image')[3].style.backgroundImage = `url(${image10})`;
 
 //landing page animation
 gsap.to(".main-content", {
@@ -83,65 +91,18 @@ gsap.to(".main-content", {
         // markers: true,
     }
 })
-// const landingTl = gsap.timeline();
-// landingTl
-// .to('.text', 
-// {
-//     // autoAlpha: 0,
-//     ease: 'power4',
-//     color: '#fff',
-//     scrollTrigger: {
-//         trigger: "#landing",
-//         endTrigger: ".black",
-//         end: "bottom top",
-//         pin: '.text',
-//         scrub: true,
-//         // markers: true,
-//     }
-// }
-// )
-// .to('.text', 
-// {
-//     // autoAlpha: 0,
-//     ease: 'none',
-//     delay: 1,
-//     scrollTrigger: {
-//         trigger: ".black",
-//         // trigger: ".grid",
-//         start: "top bottom",
-//         end: "bottom top",
-//         pin: false,
-//         scrub: true,
-//         // snap:1,
-//         // markers: true,
-//     }
-// }
-// )
-// gsap.to('.landing-about', 
-// {
-//     ease: 'power4',
-//     color: '#fff',
-//     scrollTrigger: {
-//         trigger: "#landing",
-//         endTrigger: ".black",
-//         end: "bottom top",
-//         pin: '.landing-about',
-//         scrub: true,
-//         // markers: true,
-//     }
-// }
-// )
-// gsap.to('.landing-logo', 
-// {
-//     ease: 'power4',
-//     color: '#fff',
-//     scrollTrigger: {
-//         trigger: "#landing",
-//         endTrigger: ".black",
-//         end: "bottom top",
-//         pin: '.landing-logo',
-//         scrub: true,
-//         // markers: true,
-//     }
-// }
-// )
+
+const projects = document.querySelectorAll('.project-card')
+
+projects.forEach((project)=>{
+    const projectTimeline = gsap.timeline({paused: true})
+    projectTimeline
+    .to(project.querySelector('.project-mask'), {autoAlpha: 0, duration: 0.8})
+    .to(project.querySelector('.project-image'), {autoAlpha: 1, duration:0}, 0);
+    project.addEventListener('mouseenter', e => {
+        projectTimeline.play()
+    });
+    project.addEventListener('mouseleave', e => {
+        projectTimeline.reverse()
+    });
+})

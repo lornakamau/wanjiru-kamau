@@ -124,85 +124,156 @@
   }
 }
 #projects {
-  width: 100%;
-  // height: 400px;
-  display: grid;
-  justify-content: center;
-  overflow: hidden;
-
-  .grid {
-    grid-area: 1 / 1 / 2 / 2;
+  .most-recent {
     width: 100%;
-    height: 100vh;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: 1vw;
-    // position: relative;
+    justify-content: center;
+    overflow: hidden;
+    .grid {
+      grid-area: 1 / 1 / 2 / 2;
+      width: 100%;
+      height: 100vh;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-gap: 1vw;
+      // position: relative;
 
-    .grid::after {
-      content: "";
-      height: 6rem;
-      width: 1px;
-      background: #fff;
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-    }
-    .grid__item {
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      -webkit-filter: brightness(0.7);
-      filter: brightness(0.7);
-      object-fit: cover;
-      img {
-        width: 100%;
-        height: auto;
+      .grid::after {
+        content: "";
+        height: 6rem;
+        width: 1px;
+        background: #fff;
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+      }
+      .grid__item {
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        -webkit-filter: brightness(0.7);
+        filter: brightness(0.7);
+        object-fit: cover;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .grid__item--a {
+        grid-area: 2 / 1 / 5 / 3;
+      }
+
+      .grid__item--b {
+        grid-area: 6 / 2 / 9 / 5;
+      }
+
+      .grid__item--c {
+        grid-area: 3 / 4 / 7 / 7;
+      }
+
+      .grid__item--d {
+        grid-area: 1 / 8 / 4 / 10;
+      }
+
+      .grid__item--e {
+        grid-area: 4 / 10 / 7 / 14;
+      }
+
+      .grid__item--f {
+        grid-area: 6 / 9 / 9 / 12;
       }
     }
-
-    .grid__item--a {
-      grid-area: 2 / 1 / 5 / 3;
-    }
-
-    .grid__item--b {
-      grid-area: 6 / 2 / 9 / 5;
-    }
-
-    .grid__item--c {
-      grid-area: 3 / 4 / 7 / 7;
-    }
-
-    .grid__item--d {
-      grid-area: 1 / 8 / 4 / 10;
-    }
-
-    .grid__item--e {
-      grid-area: 4 / 10 / 7 / 14;
-    }
-
-    .grid__item--f {
-      grid-area: 6 / 9 / 9 / 12;
+    .project-title {
+      grid-area: 1 / 1 / 2 / 2;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      justify-self: center;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      h1 {
+        color: #bf0603;
+        font-size: 9vw;
+        // font-weight: 50;
+        font-weight: 500;
+        font-family: "Nanum Myeongjo", serif;
+      }
     }
   }
-  .project-title {
-    grid-area: 1 / 1 / 2 / 2;
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    justify-self: center;
-    position: relative;
-    flex-direction: column;
-    text-align: center;
-    opacity: 0;
-    h1{
-      color: #BF0603;
-      font-size: 9vw;
-      // font-weight: 50;
-      font-weight: 500;
-      font-family: "Nanum Myeongjo", serif;
+  .other-projects {
+    .project-card {
+      height: 60vh;
+      position: relative;
+      cursor: pointer;
+      .project-mask{
+        background-color: #000;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-direction: column;
+        padding: 2rem 4rem;
+        color: #fff;
+        position: absolute;
+        z-index: 60;
+        top: 0;
+        left: 0;
+      }
+      .project-image{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 40;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      // &:hover{
+       
+      //   .project-mask{
+      //     opacity: 0;
+      //     transition: all 0.8s;
+      //   }
+      //   .project-image{
+      //     // transform: matrix(0.9, 0, 0, 0.9, 0, 0);
+      //     // left: 2%;
+      //     // top: 2%;
+      //     opacity: 1;
+      //     transition:  opacity 1s ;
+      //     // transform: translate();
+      //   }
+      // }
+      p{
+        text-transform: uppercase;
+        font-weight: 300;
+        // font-weight: ;
+        font-size: 0.7rem;
+      }
+      h1{
+        font-size: 3vw;
+        font-weight: 500;
+        font-family: "Nanum Myeongjo", serif;
+        letter-spacing: 2px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        span{
+          text-transform: uppercase;
+        font-weight: 300;
+        font-size: 0.7rem;
+        margin-left: 1rem;
+        }
+      }
     }
   }
 }

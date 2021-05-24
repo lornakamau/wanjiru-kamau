@@ -51,16 +51,10 @@ function getScroll(){
     // change nav link colors on scroll
     if (homePage[0]){
         if (scrollTop > window.innerHeight * 0.9 && scrollTop < window.innerHeight * 1.9 ){
-            // navBar[0].style.background = "#000";
             for (const link of navLinks){
                 link.style.color = "#fff";
             }
-        } else if (scrollTop < window.innerHeight){
-            // navBar[0].style.background = "#fff";
-            for (const link of navLinks){
-                link.style.color = "#000";
-            }
-        }  else {
+        } else {
             // navBar[0].style.background = "transparent";
             for (const link of navLinks){
                 link.style.color = "#000";
@@ -80,16 +74,15 @@ document.getElementById('image5').src = image5;
 document.getElementById('image6').src = image6;
 
 //landing page animation
-// gsap.to("#projo", {
-//     position: 'relative',
-//     zIndex: '200',
-//     color: 'red',
-//     scrollTrigger:{
-//         trigger: "#projo",
-//         markers: true,
-
-//     }
-// })
+gsap.to(".main-content", {
+    position: 'relative',
+    zIndex: '200',
+    scrollTrigger:{
+        trigger: ".main-content",
+        start: "top bottom-=15%",
+        markers: true,
+    }
+})
 // const landingTl = gsap.timeline();
 // landingTl
 // .to('.text', 

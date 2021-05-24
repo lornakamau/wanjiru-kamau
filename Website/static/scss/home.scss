@@ -6,8 +6,8 @@
     position: relative;
     .landing-logo {
       position: fixed;
-      left: 2rem;
-      bottom: 10vh;
+      left: 3vw;
+      bottom: 15vh;
       -webkit-writing-mode: vertical-rl;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
@@ -35,14 +35,17 @@
     }
     .landing-about {
       position: fixed;
-      left: 80vw;
-      right: 2rem;
-      bottom: 20vh;
+      right: 3vw;
+      bottom: 15vh;
       text-align: right;
       font-size: 12px;
       color: #fff;
       mix-blend-mode: difference;
       z-index: 1;
+      width: 20vw;
+      p{
+        line-height: 1.5;
+      }
     }
   }
   .white {
@@ -59,8 +62,8 @@
 }
 
 .main-content {
-  z-index: 99;
-  position: relative;
+  // z-index: 99;
+  // position: relative;
   .home-end {
     height: 100vh;
     position: relative;

@@ -16,15 +16,16 @@ export default class Revealer {
     }
     createTimeline() {
         this.tl = gsap.timeline({paused: false, scrollTrigger:{
-            triggerElement: '.grid',
-            start: "top 90%",
+            trigger: '.grid',
+            start: "top 85%",
             end: "bottom 10%",
-            markers: false,
+            markers: true,
             scrub: true,
+            toggleActions: "play none none reverse"
         } });
 
         this.tl.addLabel('halfway', this.options.panelDelay*1 + this.options.duration)
-        .fromTo(this.gridItems, {y: () => randomFloat(100,500)}, {
+        .fromTo(this.gridItems, {y: () => randomFloat(50,250)}, {
             duration: this.options.duration,
             ease: 'Expo.easeOut',
             y: 0,

@@ -80,7 +80,7 @@ gsap.to(".main-content", {
     scrollTrigger:{
         trigger: ".main-content",
         start: "top bottom-=15%",
-        markers: true,
+        // markers: true,
     }
 })
 // const landingTl = gsap.timeline();

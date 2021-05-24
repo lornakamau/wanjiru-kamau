@@ -103,3 +103,70 @@
 //   }
 // }
 
+#landing {
+    .containers {
+    //   margin: 0 auto;
+    position: relative;
+      background: #fff;
+      height: 100vh;
+      .landing-logo {
+        position: absolute;
+        left: 3vw;
+        bottom: 15vh;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 12px;
+        z-index: 10;
+        color: #000;
+        mix-blend-mode: difference;
+      }
+      .text {
+        color: #000;
+        letter-spacing: -1px;
+        font-weight: 50;
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        mix-blend-mode: difference;
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 20vh;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(180deg);
+        cursor: default;
+        opacity: 1;
+        visibility: visible;
+        user-select: none;
+      }
+      .text .active{
+        color:green;
+        font-size: 2rem;
+    }
+      .landing-about {
+        position: absolute;
+        right: 3vw;
+        bottom: 15vh;
+        text-align: right;
+        font-size: 12px;
+        color: #000;
+        mix-blend-mode: difference;
+        z-index: 10;
+        font-weight: 300;
+        width: 20vw;
+      }
+    }
+    .white {
+      position: relative;
+      background: #fff;
+      height: 100vh;
+    }
+    .black {
+      background: #000;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+    }
+  }

@@ -6,10 +6,11 @@ import image4 from '../img/4.jpg';
 import image5 from '../img/5.jpg';
 import image6 from '../img/6.jpg';
 import Revealer from './revealer';
-
+import { gsap } from 'gsap';
 //auto position images
 const revealer = new Revealer();
-revealer.reveal();
+revealer.createTimeline();
+
 //floating label animation for radio btns
 let checkDiv = document.getElementById("custom-float1");
 if (checkDiv){
@@ -47,21 +48,22 @@ function getScroll(){
     //     alert("jinga")
     // }}
     
-    //change nav link colors on scroll
+    // change nav link colors on scroll
     if (homePage[0]){
-        if (scrollTop > window.innerHeight && scrollTop < window.innerHeight * 1.9 ){
-            navBar[0].style.background = "#000";
+        if (scrollTop > window.innerHeight * 0.9 && scrollTop < window.innerHeight * 1.9 ){
+            // navBar[0].style.background = "#000";
             for (const link of navLinks){
                 link.style.color = "#fff";
-                const difference = difference;
-                link.style.setProperty('--blend-mode', difference);
             }
-        } else {
-            navBar[0].style.background = "#fff";
+        } else if (scrollTop < window.innerHeight){
+            // navBar[0].style.background = "#fff";
             for (const link of navLinks){
                 link.style.color = "#000";
-                const initial = initial;
-                link.style.setProperty('--blend-mode', initial);
+            }
+        }  else {
+            // navBar[0].style.background = "transparent";
+            for (const link of navLinks){
+                link.style.color = "#000";
             }
         }
     }
@@ -77,3 +79,76 @@ document.getElementById('image4').src = image4;
 document.getElementById('image5').src = image5;
 document.getElementById('image6').src = image6;
 
+//landing page animation
+// gsap.to("#projo", {
+//     position: 'relative',
+//     zIndex: '200',
+//     color: 'red',
+//     scrollTrigger:{
+//         trigger: "#projo",
+//         markers: true,
+
+//     }
+// })
+// const landingTl = gsap.timeline();
+// landingTl
+// .to('.text', 
+// {
+//     // autoAlpha: 0,
+//     ease: 'power4',
+//     color: '#fff',
+//     scrollTrigger: {
+//         trigger: "#landing",
+//         endTrigger: ".black",
+//         end: "bottom top",
+//         pin: '.text',
+//         scrub: true,
+//         // markers: true,
+//     }
+// }
+// )
+// .to('.text', 
+// {
+//     // autoAlpha: 0,
+//     ease: 'none',
+//     delay: 1,
+//     scrollTrigger: {
+//         trigger: ".black",
+//         // trigger: ".grid",
+//         start: "top bottom",
+//         end: "bottom top",
+//         pin: false,
+//         scrub: true,
+//         // snap:1,
+//         // markers: true,
+//     }
+// }
+// )
+// gsap.to('.landing-about', 
+// {
+//     ease: 'power4',
+//     color: '#fff',
+//     scrollTrigger: {
+//         trigger: "#landing",
+//         endTrigger: ".black",
+//         end: "bottom top",
+//         pin: '.landing-about',
+//         scrub: true,
+//         // markers: true,
+//     }
+// }
+// )
+// gsap.to('.landing-logo', 
+// {
+//     ease: 'power4',
+//     color: '#fff',
+//     scrollTrigger: {
+//         trigger: "#landing",
+//         endTrigger: ".black",
+//         end: "bottom top",
+//         pin: '.landing-logo',
+//         scrub: true,
+//         // markers: true,
+//     }
+// }
+// )

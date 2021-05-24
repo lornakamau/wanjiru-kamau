@@ -2,7 +2,6 @@
   height: 200vh;
   background-color: #fff;
   .containers {
-    width: 940px;
     margin: 0 auto;
     position: relative;
     .landing-logo {
@@ -24,7 +23,6 @@
       position: fixed;
       z-index: 1;
       text-align: center;
-      top: 180px;
       mix-blend-mode: difference;
       font-family: "Nanum Myeongjo", serif;
       font-size: 20vh;
@@ -60,7 +58,7 @@
   }
 }
 
-.content {
+.main-content {
   z-index: 99;
   position: relative;
   .home-end {
@@ -128,11 +126,10 @@
   justify-content: center;
   overflow: hidden;
 
-
 .grid {
   grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  height: 93%;
+  height: 90%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(13,1fr);

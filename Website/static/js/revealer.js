@@ -11,7 +11,6 @@ export default class Revealer {
             panelDelay: 0.15
         };
         this.gridItems = [...document.querySelectorAll('.grid__item')];
-        console.log(this.gridItems)
         this.createTimeline();
     }
     createTimeline() {
@@ -30,6 +29,7 @@ export default class Revealer {
             ease: 'Expo.easeOut',
             y: 0,
             opacity: 1,
+            stagger: 0.1,
         });  
     }
     // reveal() {

@@ -11,6 +11,7 @@ export default class Revealer {
             panelDelay: 0.15
         };
         this.gridItems = [...document.querySelectorAll('.grid__item')];
+        this.projectTitle = document.querySelectorAll('.project-title');
         this.createTimeline();
     }
     createTimeline() {
@@ -18,7 +19,6 @@ export default class Revealer {
             trigger: '.grid',
             start: "top 85%",
             end: "bottom 10%",
-            markers: true,
             scrub: true,
             toggleActions: "play none none reverse"
         } });
@@ -30,7 +30,13 @@ export default class Revealer {
             y: 0,
             opacity: 1,
             stagger: 0.1,
-        });  
+        })
+        .fromTo(this.projectTitle, {y: 100}, {
+            y: 0,
+            duration: 1,
+            ease: 'Expo.easeOut',
+            opacity: 1
+        }, 0.4);  
     }
     // reveal() {
     //     this.tl.restart();

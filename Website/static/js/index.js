@@ -11,11 +11,12 @@ import image9 from '../img/9.jpg';
 import image10 from '../img/10.jpg';
 import Revealer from './revealer';
 import { gsap } from 'gsap';
-//auto position images
+
+//auto position images in projects section
 const revealer = new Revealer();
 revealer.createTimeline();
 
-//floating label animation for radio btns
+//floating label animation for radio btns in contact
 let checkDiv = document.getElementById("custom-float1");
 if (checkDiv){
     checkDiv.addEventListener("mouseleave", function() {
@@ -40,18 +41,8 @@ function getScroll(){
     var scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-    var aboutImage = document.getElementsByClassName("about-image");
-    var navBar = document.getElementsByClassName("navbar");
     var navLinks = document.getElementsByClassName("nav-link");
-    var homePage = document.getElementsByClassName("landing");
-    // if (scrollTop >  window.innerWidth * .8 && aboutImage[0]){
-    //     aboutImage[0].style.filter = "grayscale(100%)";
-    //     alert("mavi")
-    // } else if (scrollTop <  window.innerWidth * .7 && aboutImage[0]) {
-    //     aboutImage[0].style.filter = "grayscale(0%)";
-    //     alert("jinga")
-    // }}
-    
+    var homePage = document.getElementsByClassName("landing");    
     // change nav link colors on scroll
     if (homePage[0]){
         if (scrollTop > window.innerHeight * 0.9 && scrollTop < window.innerHeight * 1.9 ){
@@ -59,7 +50,6 @@ function getScroll(){
                 link.style.color = "#fff";
             }
         } else {
-            // navBar[0].style.background = "transparent";
             for (const link of navLinks){
                 link.style.color = "#000";
             }
@@ -68,20 +58,22 @@ function getScroll(){
 }
 document.body.onscroll = getScroll;
 
+//add images to project section
+var projectDiv = document.getElementById("projects");
+if (projectDiv) {
+    document.getElementById('image1').src = image1;
+    document.getElementById('image2').src = image2;
+    document.getElementById('image3').src = image3;
+    document.getElementById('image4').src = image4;
+    document.getElementById('image5').src = image5;
+    document.getElementById('image6').src = image6;
+    document.getElementsByClassName('project-image')[0].style.backgroundImage = `url(${image7})`;
+    document.getElementsByClassName('project-image')[1].style.backgroundImage = `url(${image8})`;
+    document.getElementsByClassName('project-image')[2].style.backgroundImage = `url(${image9})`;
+    document.getElementsByClassName('project-image')[3].style.backgroundImage = `url(${image10})`;
+}
 
-
-document.getElementById('image1').src = image1;
-document.getElementById('image2').src = image2;
-document.getElementById('image3').src = image3;
-document.getElementById('image4').src = image4;
-document.getElementById('image5').src = image5;
-document.getElementById('image6').src = image6;
-document.getElementsByClassName('project-image')[0].style.backgroundImage = `url(${image7})`;
-document.getElementsByClassName('project-image')[1].style.backgroundImage = `url(${image8})`;
-document.getElementsByClassName('project-image')[2].style.backgroundImage = `url(${image9})`;
-document.getElementsByClassName('project-image')[3].style.backgroundImage = `url(${image10})`;
-
-//landing page animation
+//landing page animation to position the rest of content 
 gsap.to(".main-content", {
     position: 'relative',
     zIndex: '200',
@@ -92,8 +84,8 @@ gsap.to(".main-content", {
     }
 })
 
-const projects = document.querySelectorAll('.project-card')
-
+//animate on hover for project cards
+const projects = document.querySelectorAll('.project-card');
 projects.forEach((project)=>{
     const projectTimeline = gsap.timeline({paused: true})
     projectTimeline
@@ -106,3 +98,13 @@ projects.forEach((project)=>{
         projectTimeline.reverse()
     });
 })
+
+//add class active to nav links
+jQuery(function($) {
+    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+    $('.navbar-nav .nav-link').each(function() {
+     if (this.href === path) {
+      $(this).addClass('active');
+     }
+    });
+   });

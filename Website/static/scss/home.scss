@@ -94,7 +94,7 @@
         }
       }
       &:hover {
-        span a,
+        a,
         .bi-arrow-up-right {
           color: #000 !important;
         }
@@ -115,7 +115,7 @@
       width: 2rem;
       height: 2rem;
       margin-bottom: 2rem;
-      margin-left: 2rem;
+      margin-left: 1rem;
       // transition: width 0.4s;
       border-radius: 50%;
       transition: 0.4s;
@@ -124,6 +124,21 @@
   }
 }
 #projects {
+  h2{
+    color: #bf0603;
+    font-size: 4.5vw;
+    margin-left: 8.33333%;
+    font-weight: 500;
+    font-family: "Nanum Myeongjo", serif;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+  .p-heading {
+    margin-left: 8.33333%;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.85rem;
+  }
   .most-recent {
     width: 100%;
     display: grid;
@@ -131,7 +146,7 @@
     overflow: hidden;
     .grid {
       grid-area: 1 / 1 / 2 / 2;
-      width: 100%;
+      width: 76%;
       height: 100vh;
       margin: auto;
       display: grid;
@@ -206,11 +221,13 @@
     }
   }
   .other-projects {
+    margin-top: 4rem;
     .project-card {
       height: 60vh;
       position: relative;
       cursor: pointer;
-      .project-mask{
+      margin: 1.5rem 0rem;
+      .project-mask {
         background-color: #000;
         height: 100%;
         width: 100%;
@@ -226,7 +243,7 @@
         top: 0;
         left: 0;
       }
-      .project-image{
+      .project-image {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -238,28 +255,12 @@
         left: 0;
         opacity: 0;
       }
-      // &:hover{
-       
-      //   .project-mask{
-      //     opacity: 0;
-      //     transition: all 0.8s;
-      //   }
-      //   .project-image{
-      //     // transform: matrix(0.9, 0, 0, 0.9, 0, 0);
-      //     // left: 2%;
-      //     // top: 2%;
-      //     opacity: 1;
-      //     transition:  opacity 1s ;
-      //     // transform: translate();
-      //   }
-      // }
-      p{
+      p {
         text-transform: uppercase;
         font-weight: 300;
-        // font-weight: ;
         font-size: 0.7rem;
       }
-      h1{
+      h1 {
         font-size: 3vw;
         font-weight: 500;
         font-family: "Nanum Myeongjo", serif;
@@ -267,11 +268,11 @@
         display: flex;
         justify-content: flex-start;
         align-content: flex-start;
-        span{
+        span {
           text-transform: uppercase;
-        font-weight: 300;
-        font-size: 0.7rem;
-        margin-left: 1rem;
+          font-weight: 300;
+          font-size: 0.7rem;
+          margin-left: 1rem;
         }
       }
     }
@@ -280,7 +281,7 @@
 @media only screen and (max-width: 760px) {
   .home-end {
     h1 {
-      span a,
+      a,
       .bi-arrow-up-right {
         color: #bf0603 !important;
       }

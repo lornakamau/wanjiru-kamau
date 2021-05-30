@@ -1,71 +1,88 @@
-{%extends 'base.html'%} 
-{% load static %}
-{% block content %}
-<div id="landing">
-  <div class="containers">
-    <div class="landing-logo">kitu kidogo</div>
-    <span class="text">Wanjiru Kamau</span>
-    <div class="landing-about">
-      <p>Nairobi, Kenya</p>
-      <br><br>
-      <p class="mb-0">A fullstack software developer who loves abc dkf fjifbg. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, animi?</p>
+{%extends 'base.html'%} {% load static %} {% block content %}
+<div id="about">
+  <div class="row">
+    <div class="col-md-6 about-left">
+      <img alt="lorna" id="about-avatar" />
+      <!-- <h2>Hi,</h2> -->
     </div>
-  </div>
-  <!-- <div class="white"></div> -->
-  <div class="black"></div>
-</div>
-<div style="height:100vh" id="projo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem deleniti dolores ut a perferendis enim numquam doloremque cumque natus quae! Alias, ipsum blanditiis assumenda laboriosam animi error totam explicabo expedita illo quos vitae natus facere soluta sint nemo unde vel nam numquam architecto. Quis, mollitia saepe ratione natus harum eum voluptatibus quo sunt ex at porro laborum maiores inventore! Quasi, aperiam cumque explicabo velit recusandae ratione deserunt beatae quis accusamus? Consectetur quis saepe sit at eaque fugit hic blanditiis incidunt, tenetur voluptates velit veniam eum veritatis reprehenderit impedit recusandae voluptas similique consequatur aut beatae aspernatur nulla iure molestias inventore. Tempore odio ipsa cupiditate, ipsam mollitia ea totam minima suscipit quae, nihil excepturi quam, minus ipsum dolorem id soluta accusantium quidem magnam numquam provident ex. Possimus, dignissimos. Officiis a eaque sint laboriosam dolorum nemo harum vitae iste, maxime molestiae saepe, non eligendi, minus incidunt quia. Veniam et cumque, sit incidunt facere corrupti voluptatum molestiae expedita minus, soluta dolore, eius enim quo natus amet magni nihil nesciunt nemo! Itaque earum sunt doloribus odit quae illum, nostrum error commodi! Dolorum quod magni error quasi a animi facilis aperiam corrupti, perferendis qui, vitae iusto, iure eius incidunt nostrum accusantium. Esse recusandae quibusdam totam, assumenda voluptates voluptatum ab temporibus officia aut consectetur laudantium ratione vel quo hic, at quasi. Provident molestias ipsum optio cumque dolorem veniam quis laboriosam libero in, vitae nihil corporis laudantium atque. Similique, eos perferendis sit quidem non sint nobis illum repellat sunt voluptatum. Quod, quasi facilis voluptas obcaecati quibusdam blanditiis dolore ratione consequuntur corporis amet numquam modi in sapiente, voluptatibus perspiciatis libero? Delectus enim optio cum! Perspiciatis commodi odio alias incidunt amet sequi modi! Rem perspiciatis, reprehenderit fugit ipsa tenetur reiciendis voluptate temporibus, laudantium nemo excepturi deserunt eum quasi quam non et magni maiores suscipit quia dolore quos aliquam necessitatibus. Mollitia?</div>
-<!-- <div class="container-fluid" id="about">
-  <div class="row contained">
-    <div class="col-sm-12">
-      <h1>I'M Wanjiru <br> A kenyan front end</h1>
-    </div>
-    <div class="col-sm-12">
-      <div class="row">
-        <div class="col-md-3 d-flex">
-          <p class="inner-text">I STRIVE TO DEVELOP A THOUGHTFUL,
-            FUNCTIONAL AND AESTHETIC DESIGN,
-            BASED ON A STRATEGIC APPROACH.</p>
-        </div>
-        <div class="col-md-9">
-          <h1>developer <br>
-            I FOCUS MY WORK ON  </h1>
-        </div>
+    <div class="col-md-6 about-right">
+      <h2>A software developer with an engineering background focusing on web development and interface design.</h2>
+      <p>
+        At the crossroads between UX/UI design and front-end development, I aim to create adaptable and responsive
+        websites where motion, interaction and design are perfectly integrated to form a unique experience.
+        All through my growing years, I maintained a deep sense of curiosity
+        about the world. Design has been my way to explore that innate curiosity
+        by visualizing and creating meaning and value.
+      </p>
+      ‍
+      <p>
+        I have a Bachelor's Degree in Computer Science and a Master's Degree in
+        Digital Media. I joined Microsoft in 2016 and during my time at
+        Microsoft, I've redesigned, created and invented time management and
+        productivity solutions that serve millions of people and helps them
+        become more productive. I recently co-founded and co-invented a canvas
+        based technology for organizing artifacts around projects and goals.
+      </p>
+      ‍
+      <p>I love to travel, take photos on my phone and design watches.</p>
+
+      <div class="skills">
+        <h4 class="subheading">main expertise</h4>
+        <p><span>001</span>Web Design</p>
+        <p><span>002</span>UI/UX Design</p>
+      </div>
+      <div class="skills">
+        <h4 class="subheading">skillset</h4>
+        <p><span>001</span>HTML, CSS, Javascript</p>
+        <p><span>002</span>Angular, Figma</p>
       </div>
     </div>
-    <div class="col-sm-12">
-      <h1>BRANDING AND <br> INTERFACE DESIGN.</h1>
-    </div>
+    <!-- <div class="col-md-1"></div> -->
   </div>
-  <div class="row">
-    <div class="col-sm-12 d-flex justify-content-center image-container"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="about-image"
-      alt="wanjiru"></div>
-    <div class="col-md-5"></div>
-    <div class="col-md-5 more-about">
-      <p>
-        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
-      </p><br>
-      <p>
-        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
-      </p><br>
-      <p>
-        I enjoy blah blah blah. I especially enjoy Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium maiores minus ea unde aspernatur eveniet totam atque tenetur. Rerum quod praesentium consequatur nesciunt temporibus? Minus eos blanditiis dicta ipsa?
-      </p>
+  <div class="row about-bottom">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h2>
+        Beyond web development and UI/UX design, I enjoy <span class="active">eating</span> (who doesn't?),
+        <span>photography</span>, <span>writing</span>, <span>painting</span> and <span>reading</span>.
+      </h2>
+      <div class="interests-container">
+        <div class="interests-counter"><p>01/05</p></div>
+        <!-- <div class="interest-desc">
+          <p>I particularly love eating out. Some of my favorite restaurants in Nairobi include: <a href="http://" target="_blank" rel="noopener noreferrer">Sierra Burger & Wine</a>, <a href="http://" target="_blank" rel="noopener noreferrer">Tamambo Karen</a> and <a href="http://" target="_blank" rel="noopener noreferrer">Nyef</a></p>
+          <p>These are my go to for burgers, seafood and nyef resp.</p>
+        </div> -->
+        <!-- <div class="interest-desc">
+          <p>I recently developed an interest in photography and I'm keen on growing my skills on the same.
+          I use the Canon M50 and my favorite subjects to photograph are birds, flowers and food.</p>
+          <p>You can follow me on <a href="http://" target="_blank" rel="noopener noreferrer">instagram</a> to keep track of what I'm photographing.</p>
+        </div> -->
+        <!-- <div class="interest-desc">
+          <p>While I haven't written in a hot minute, when I do, I write about my experiences, desires and wild imagination.</p>
+          <p>In the meantime, you can have a read of my previous works <a href="http://" target="_blank" rel="noopener noreferrer">here</a></p>
+        </div> -->
+        <!-- <div class="interest-desc">
+          <p>I have always desired to express myself through painting. I work with acrylic and watercolor media. My aim is to do a deep study of flowers and birds.</p>
+          <p>I am still very armateur at this but should you be interested in keeping up with my growth in the same, you can follow me on my <a href="http://" target="_blank" rel="noopener noreferrer">instagram.</a></p>
+        </div> -->
+        <div class="interest-desc">
+          <p>Don't you just love a good book on a Sunday afternoon? Well I know I do. I love reading books on psychology and tragic romance.</p>
+          <p>Some of my favorites include: The Road Less Traveled (M. Scott Peck), Stumbling on Happiness (Daniel Gilbert), The Happiness Hypothesis (Jonathan Haidt), Flow (Mihaly Csikszentmihalyi), The Great Gatsby (F. Scott Fitzgerald) and Atonement (Ian McEwan) to name a few.</p>
+        </div>
+      </div>
     </div>
     <div class="col-md-2"></div>
   </div>
-  
-  <div class="row about-end">
-    <h2>let's do something amazing <span class="d-block"><a href="{% url 'contact' %}">get in touch</a></span></h2>
-    <div class="row socials">
-      <div class="col-sm-12 d-flex">
-        <span class="social-head">find me</span>
-        <a href="#" target="_blank" rel="noopener noreferrer"><span>nstgrm.</span></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><span>lnkdn.</span></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><span>gthub.</span></a>
-      </div>
-    </div>
+  <div class="page-end">
+    <h1>let's do something amazing 
+      <a href="{% url 'contact' %}">
+        <span class="d-block span-hover">get in touch
+          <span class="bi bi-arrow-up-right">
+            &nearr;
+          </span>
+        </span>
+      </a>
+    </h1>
   </div>
-  
-</div> -->
+</div>
 {%endblock%}

@@ -108,3 +108,9 @@ jQuery(function($) {
      }
     });
    });
+
+//about page animations
+var aboutPage = document.getElementById("about");
+if(aboutPage){
+    document.getElementById('about-avatar').src = image1;
+}

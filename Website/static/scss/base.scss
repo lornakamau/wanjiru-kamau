@@ -142,6 +142,62 @@ button {
   transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
 }
 
+.page-end {
+  height: 100vh;
+  position: relative;
+  h1 {
+    font-family: "Nanum Myeongjo", serif;
+    letter-spacing: -4px;
+    font-weight: 50;
+    color: #bf0603;
+    font-size: 15vh;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    span {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        transition: width 0.4s;
+        transition-timing-function: ease-in-out;
+        height: 0;
+        background: #000;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+        margin-top: 1rem;
+      }
+    }
+    &:hover {
+      a,
+      .bi-arrow-up-right {
+        color: #000 !important;
+      }
+      .span-hover:after {
+        height: 2px;
+        width: 30%;
+        opacity: 1;
+      }
+      .bi-arrow-up-right {
+        padding-top: 7.5vh;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .bi-arrow-up-right {
+    margin-left: 1rem;
+    position: absolute;
+    font-size: 4vh;
+    transition: 0.4s;
+    font-weight: 700;
+    transition-timing-function: ease-in-out;
+    padding: 2%;
+    transform: rotate(20deg);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .d-small {
     display: block;
@@ -149,5 +205,43 @@ button {
   .navbar > .container-fluid {
     justify-content: space-between;
     // padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .page-end {
+    h1 {
+      a,
+      .bi-arrow-up-right {
+        color: #bf0603 !important;
+      }
+      span:after {
+        height: 2px !important;
+        width: 30%;
+        opacity: 1;
+      }
+      span {
+        &::after {
+          position: absolute;
+          content: "";
+          // width: 30%;
+          width: 30%;
+          transition: width 0.4s;
+          transition-timing-function: ease-in-out;
+          height: 2px;
+          background: #bf0603;
+          top: 100%;
+          left: 0;
+          pointer-events: none;
+          margin-top: 1rem;
+        }
+      }
+      .bi-arrow-up-right {
+        border: 1px solid #bf0603;
+        border-radius: 50%;
+        padding: 0.4rem;
+        transform: rotate(45deg);
+      }
+    }
   }
 }

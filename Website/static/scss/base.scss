@@ -52,6 +52,7 @@ a {
 
 a:hover {
   outline: none;
+  color: #BF0603;
 }
 
 /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
@@ -79,11 +80,18 @@ a:focus-visible {
 .ml-auto {
   margin-left: auto !important;
 }
-.d-small {
-  display: none;
-}
 .navbar {
   font-size: 14px;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  .navbar-brand{
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .d-others{
+    opacity: 0;
+  }
 }
 .navbar > .container-fluid {
   justify-content: flex-end;
@@ -200,9 +208,6 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-  .d-small {
-    display: block;
-  }
   .navbar > .container-fluid {
     justify-content: space-between;
     // padding-right: 0;

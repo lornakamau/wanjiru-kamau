@@ -106,15 +106,15 @@ processes.forEach(process =>{
         trigger: process.querySelector('.process-icon'),
         start: 'top 85%',
         end: 'top 40%',
-        markers: true,
+        // markers: true,
         scrub: true,
         toggleActions: "play none none reverse"
     } });
-    console.log(process.querySelector('.process-icon'), process.querySelector('.process-title'), process.querySelector('p'))
     processTl.fromTo(process.querySelector('.process-icon'), {autoAlpha: 0, y: 20}, {
         autoAlpha: 1,
         duration: 2,
         y: 0,
+        color: "#BF0603",
         ease: 'Expo.easeOut',
     }, 0.4).fromTo(process.querySelector('.process-title'), {autoAlpha: 0, y: 20}, {
         autoAlpha: 1,
@@ -139,8 +139,27 @@ jQuery(function($) {
     });
    });
 
+//animate visibility of home navigation
+var homePage = document.getElementsByClassName("landing");
+if (!homePage[0]){
+    gsap.to('.d-others', {opacity: 1})
+}
+
 //about page animations
 var aboutPage = document.getElementById("about");
 if(aboutPage){
-    document.getElementById('about-avatar').src = image1;
+    var aboutAvatar = document.getElementById('about-avatar')
+    aboutAvatar.src = image1;
+    gsap.to(aboutAvatar, {
+        scrub: true,
+        delay: 2,
+        scrollTrigger:{
+            trigger: aboutAvatar,
+            start: "top top",
+            pin: true,
+            markers: true,
+            endTrigger: ".about-right",
+            end: "bottom 80%"
+        }
+    })
 }

@@ -99,6 +99,36 @@ projects.forEach((project)=>{
     });
 })
 
+//animate fade in of process cards
+const processes = document.querySelectorAll('.process-card');
+processes.forEach(process =>{
+    let processTl = gsap.timeline({paused: false, scrollTrigger:{
+        trigger: process.querySelector('.process-icon'),
+        start: 'top 85%',
+        end: 'top 40%',
+        markers: true,
+        scrub: true,
+        toggleActions: "play none none reverse"
+    } });
+    console.log(process.querySelector('.process-icon'), process.querySelector('.process-title'), process.querySelector('p'))
+    processTl.fromTo(process.querySelector('.process-icon'), {autoAlpha: 0, y: 20}, {
+        autoAlpha: 1,
+        duration: 2,
+        y: 0,
+        ease: 'Expo.easeOut',
+    }, 0.4).fromTo(process.querySelector('.process-title'), {autoAlpha: 0, y: 20}, {
+        autoAlpha: 1,
+        duration: 2,
+        y: 0,
+        ease: 'Expo.easeOut',
+    }, 0.8).fromTo(process.querySelector('p'), {autoAlpha: 0, y: 30}, {
+        autoAlpha: 1,
+        duration: 2,
+        y: 0,
+        ease: 'Expo.easeOut',
+    }, 1.2)
+}) 
+
 //add class active to nav links
 jQuery(function($) {
     var path = window.location.href; // because the 'href' property of the DOM element is the absolute path

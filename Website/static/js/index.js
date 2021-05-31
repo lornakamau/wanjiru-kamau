@@ -151,14 +151,16 @@ if(aboutPage){
     var aboutAvatar = document.getElementById('about-avatar');
     aboutAvatar.src = image1;
     gsap.to(aboutAvatar, {
-        delay: 2,
+        // duration: 0.1, 
+        // ease:'Expo.easeOut',
         scrollTrigger: {
             trigger: aboutAvatar,
             start: "top top",
             pin: true,
             // markers: true,
             endTrigger: ".about-right",
-            end: "bottom 80%"
+            end: "bottom 80%",
+            toggleActions: "play none none reverse"
         }
     })
     var aboutBottom = document.getElementsByClassName('about-bottom')[0];
@@ -197,19 +199,32 @@ if(aboutPage){
             pinSpacing: false
         }
     })
-    
-    var interestNavs = document.querySelectorAll('.interest-nav');
+    // gsap.to('.overflow-y-hidden', {
+    //     // duration: 1000,
+    //     scrollTrigger: {
+    //         trigger: aboutBottom,
+    //         top: 'top 5%',
+    //         pin: '.overflow-y-hidden',
+    //         endTrigger: aboutBottom.querySelector('.interest-dec:last-child'),
+    //         end: 'bottom 80%',
+    //         // markers: true,
+    //         pinSpacing: false
+    //     }
+    // })
+    //instantiate all other interests as invisible apart from the first one
+    gsap.to('.interest2', {autoAlpha: 0, duration: 0, opacity: 0, scrollTrigger:{trigger: aboutBottom, start: 'top top'}});
+    gsap.to('.interest3', {autoAlpha: 0, duration: 0, opacity: 0, scrollTrigger:{trigger: aboutBottom, start: 'top top'}})
+    gsap.to('.interest4', {autoAlpha: 0, duration: 0, opacity: 0, scrollTrigger:{trigger: aboutBottom, start: 'top top'}})
+    gsap.to('.interest5', {autoAlpha: 0, duration: 0, opacity: 0, scrollTrigger:{trigger: aboutBottom, start: 'top top'}})
     let interestsTl = gsap.timeline({paused: false , scrollTrigger:{
         trigger: '.interests-container',
         start: 'top 30%',
         endTrigger: aboutBottom.querySelector('.interest-dec:last-child'),
         end: 'bottom 50%',
-        // pin: process,
-        markers: true,
+        // markers: true,
         scrub: true,
         toggleActions: "play none none reverse"
     } });
-    
     //animate other interests section
     interestsTl
     //first interest
@@ -218,7 +233,7 @@ if(aboutPage){
         duration: 0,
         ease: 'none',
     }, 0)
-    .to(interestNavs[0], {
+    .to('.interestNav1', {
         color: "#bf0603",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -228,7 +243,7 @@ if(aboutPage){
         duration: 0.1, 
         ease:'Expo.easeOut'
     }, 0.1)
-    .to(interestNavs[0], {
+    .to('.interestNav1', {
         color: "#000",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -240,7 +255,7 @@ if(aboutPage){
         duration: 0,
         ease: 'none',
     }, 0.1)
-    .to(interestNavs[1], {
+    .to('.interestNav2', {
         color: "#bf0603",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -255,7 +270,7 @@ if(aboutPage){
         duration: 0.1, 
         ease:'Expo.easeOut'
     },0.2)
-    .to(interestNavs[1], {
+    .to('.interestNav2', {
         color: "#000",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -268,7 +283,7 @@ if(aboutPage){
         duration: 0,
         ease: 'none',
     }, 0.2)
-    .to(interestNavs[2], {
+    .to('.interestNav3', {
         color: "#bf0603",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -283,7 +298,7 @@ if(aboutPage){
         duration: 0.1, 
         ease:'Expo.easeOut'
     },0.3)
-    .to(interestNavs[2], {
+    .to('.interestNav3', {
         color: "#000",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -296,7 +311,7 @@ if(aboutPage){
         duration: 0,
         ease: 'none',
     }, 0.3)
-    .to(interestNavs[3], {
+    .to('.interestNav4', {
         color: "#bf0603",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -311,7 +326,7 @@ if(aboutPage){
         duration: 0.1, 
         ease:'Expo.easeOut'
     },0.4)
-    .to(interestNavs[3], {
+    .to('.interestNav4', {
         color: "#000",
         duration: 0.1, 
         ease:'Expo.easeOut'
@@ -324,10 +339,23 @@ if(aboutPage){
         duration: 0,
         ease: 'none',
     }, 0.4)
-    .to(interestNavs[4], {
+    .to('.interestNav5', {
         color: "#bf0603",
     }, 0.4)
     .fromTo('.interest5', {autoAlpha: 0}, {
         autoAlpha: 1,
-    }, 0.4)
+    }, 0.4);
+
+    //unset the height of the interests container
+    gsap.fromTo('.interests-desc-container', {height: '250vh'}, {
+        height: '60vh',
+        scrollTrigger: {
+            trigger: '.page-end',
+            start: 'top 80%',
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+            // markers: true
+        }
+    })
 }
+

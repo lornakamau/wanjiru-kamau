@@ -1,5 +1,5 @@
 #about {
-  margin-top: 4rem;
+  margin-top: 10vh;
   p {
     line-height: 1.5rem;
   }
@@ -19,7 +19,7 @@
     #about-avatar {
       object-fit: cover;
       width: 100%;
-      height: calc(100vh - 4rem);
+      height: calc(100vh - 10vh);
       filter: grayscale(100%);
     }
     h2 {
@@ -99,10 +99,7 @@
         position: absolute;
         top: 0%;
         left: 0%;
-        &:not(.first-child){
-          opacity: 0;
-        }
-        // transform: translate(-50% 0%);
+        opacity: 0;
       }}
     }
   }

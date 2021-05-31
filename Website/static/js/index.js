@@ -14,7 +14,6 @@ import { gsap } from 'gsap';
 
 //auto position images in projects section
 const revealer = new Revealer();
-revealer.createTimeline();
 
 //floating label animation for radio btns in contact
 let checkDiv = document.getElementById("custom-float1");
@@ -72,17 +71,6 @@ if (projectDiv) {
     document.getElementsByClassName('project-image')[2].style.backgroundImage = `url(${image9})`;
     document.getElementsByClassName('project-image')[3].style.backgroundImage = `url(${image10})`;
 }
-
-//landing page animation to position the rest of content 
-gsap.to(".main-content", {
-    position: 'relative',
-    zIndex: '200',
-    scrollTrigger:{
-        trigger: ".main-content",
-        start: "top bottom-=15%",
-        // markers: true,
-    }
-})
 
 //animate on hover for project cards
 const projects = document.querySelectorAll('.project-card');
@@ -143,23 +131,203 @@ jQuery(function($) {
 var homePage = document.getElementsByClassName("landing");
 if (!homePage[0]){
     gsap.to('.d-others', {opacity: 1})
+} else {
+    revealer.createTimeline();
+    //landing page animation to position the rest of content 
+    gsap.to(".main-content", {
+        position: 'relative',
+        zIndex: '200',
+        scrollTrigger:{
+            trigger: ".main-content",
+            start: "top bottom-=15%",
+            // markers: true,
+        }
+    })
 }
 
 //about page animations
 var aboutPage = document.getElementById("about");
 if(aboutPage){
-    var aboutAvatar = document.getElementById('about-avatar')
+    var aboutAvatar = document.getElementById('about-avatar');
     aboutAvatar.src = image1;
     gsap.to(aboutAvatar, {
-        scrub: true,
         delay: 2,
-        scrollTrigger:{
+        scrollTrigger: {
             trigger: aboutAvatar,
             start: "top top",
             pin: true,
-            markers: true,
+            // markers: true,
             endTrigger: ".about-right",
             end: "bottom 80%"
         }
     })
+    var aboutBottom = document.getElementsByClassName('about-bottom')[0];
+    gsap.to('.interests-heading', {
+        scrollTrigger: {
+            trigger: aboutBottom,
+            top: 'top 5%',
+            pin: '.interests-heading',
+            endTrigger: aboutBottom.querySelector('.about-bottom'),
+            end: 'bottom 80%',
+            // markers: true,
+            pinSpacing: false
+        }
+    })
+    gsap.to('.interests-counter', {
+        // duration: 1000,
+        scrollTrigger: {
+            trigger: aboutBottom,
+            top: 'top 5%',
+            pin: '.interests-counter',
+            endTrigger: aboutBottom.querySelector('.interest-dec:last-child'),
+            end: 'bottom 80%',
+            // markers: true,
+            pinSpacing: false
+        }
+    })
+    gsap.to('.interests-desc-container', {
+        // duration: 1000,
+        scrollTrigger: {
+            trigger: aboutBottom,
+            top: 'top 5%',
+            pin: '.interests-desc-container',
+            endTrigger: aboutBottom.querySelector('.interest-dec:last-child'),
+            end: 'bottom 80%',
+            // markers: true,
+            pinSpacing: false
+        }
+    })
+    
+    var interestNavs = document.querySelectorAll('.interest-nav');
+    let interestsTl = gsap.timeline({paused: false , scrollTrigger:{
+        trigger: '.interests-container',
+        start: 'top 30%',
+        endTrigger: aboutBottom.querySelector('.interest-dec:last-child'),
+        end: 'bottom 50%',
+        // pin: process,
+        markers: true,
+        scrub: true,
+        toggleActions: "play none none reverse"
+    } });
+    
+    //animate other interests section
+    interestsTl
+    //first interest
+    .to('.interests-counter',{
+        innerHTML: '01/05',
+        duration: 0,
+        ease: 'none',
+    }, 0)
+    .to(interestNavs[0], {
+        color: "#bf0603",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0)
+    .fromTo('.interest1', {autoAlpha: 1}, {
+        autoAlpha: 0,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.1)
+    .to(interestNavs[0], {
+        color: "#000",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.1)
+
+    //second interest
+    .to('.interests-counter',{
+        innerHTML: '02/05',
+        duration: 0,
+        ease: 'none',
+    }, 0.1)
+    .to(interestNavs[1], {
+        color: "#bf0603",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.1)
+    .fromTo('.interest2', {autoAlpha: 0}, {
+        autoAlpha: 1,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    },0.1)
+    .fromTo('.interest2', {autoAlpha: 1}, {
+        autoAlpha: 0,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    },0.2)
+    .to(interestNavs[1], {
+        color: "#000",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.2)
+
+
+    //third interest
+    .to('.interests-counter',{
+        innerHTML: '03/05',
+        duration: 0,
+        ease: 'none',
+    }, 0.2)
+    .to(interestNavs[2], {
+        color: "#bf0603",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.2)
+    .fromTo('.interest3', {autoAlpha: 0}, {
+        autoAlpha: 1,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.2)
+    .fromTo('.interest3', {autoAlpha: 1}, {
+        autoAlpha: 0,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    },0.3)
+    .to(interestNavs[2], {
+        color: "#000",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.3)
+
+
+    //fourth interest
+    .to('.interests-counter',{
+        innerHTML: '04/05',
+        duration: 0,
+        ease: 'none',
+    }, 0.3)
+    .to(interestNavs[3], {
+        color: "#bf0603",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.3)
+    .fromTo('.interest4', {autoAlpha: 0}, {
+        autoAlpha: 1,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.3)
+    .fromTo('.interest4', {autoAlpha: 1}, {
+        autoAlpha: 0,
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    },0.4)
+    .to(interestNavs[3], {
+        color: "#000",
+        duration: 0.1, 
+        ease:'Expo.easeOut'
+    }, 0.4)
+
+    
+    //fifth interest
+    .to('.interests-counter',{
+        innerHTML: '05/05',
+        duration: 0,
+        ease: 'none',
+    }, 0.4)
+    .to(interestNavs[4], {
+        color: "#bf0603",
+    }, 0.4)
+    .fromTo('.interest5', {autoAlpha: 0}, {
+        autoAlpha: 1,
+    }, 0.4)
 }

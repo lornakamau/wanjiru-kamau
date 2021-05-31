@@ -74,23 +74,36 @@
   .about-bottom{
     text-align: center;
     margin-top: 5rem;
-    height: 100vh;
+    // height: 100vh;
+    // .about-content{
+    //   // background-color: red;
+    //   // height: 100vh;
+    // }
+
     .interests-container{
       position: relative;
+      // background-color: yellow;
       .interests-counter{
-        position: absolute;
-        top: 0%;
-        left: 0%;
+        // position: absolute;
+        // top: 0%;
+        // left: 0%;
         font-family: "Nanum Myeongjo", serif;
         font-size: 1rem;
       }
+      .interests-desc-container{
+        position: relative;
+        // background-color: yellowgreen;
+        height: 250vh;
       .interest-desc{
+        color: black;
         position: absolute;
-        top: 50%;
-        left: 20%;
-        transform: translate(-50% 0%);
-        
-      }
+        top: 0%;
+        left: 0%;
+        &:not(.first-child){
+          opacity: 0;
+        }
+        // transform: translate(-50% 0%);
+      }}
     }
   }
 }

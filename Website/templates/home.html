@@ -1,13 +1,13 @@
 {%extends 'base.html'%} {% load static %} 
 {% block content %}
 <div class="landing">
-  <div class="containers">
+  <div class="landing-container">
     <div class="landing-logo">kitu kidogo</div>
     <span class="text">Wanjiru Kamau</span>
     <div class="landing-about">
       <p>Nairobi, Kenya</p>
       <br><br>
-      <p>A fullstack software developer who loves abc dkf fjifbg. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, animi?</p>
+      <p>A full-stack software developer with an engineering background focusing on web development and interface design.</p>
     </div>
   </div>
   <div class="white"></div>
@@ -88,17 +88,60 @@
       </div>
     </div>
   </div>
+  <div id="process">
+    <h2>My Process</h2>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Nature of your product</div>
+          <p>It is important to understand the nature of your product. Questions such as who is your target audience, what is the positioning of your product in the market, what needs does it cover and the likes will be answered at this stage. I would love to have this information in writing and for that I will provide a google sheet.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Research and analytics</div>
+          <p>Once we understand the objectives and goals of the business and the needs of the consumer, we proceed to search for solutions that satisfy both parties. We also explore the current website and analytics if any.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Wireframing and design</div>
+          <p>Here, we define the full scope of my work and proceed to draft a list of requirements for MVP. We then create unique and custom wireframes and prototypes for the website.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Development</div>
+          <p>Once the wireframes and prototypes have been approved, we proceed to developing the website. This process may take longer than any of the aforementioned. We will however be in constant communication about the progress.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Basic seo and analytics</div>
+          <p>I will set up internal SEO such as website title and description. It is worth noting that the results of SEO do not solely depend on internal SEO settings. It is a complex process that is way beyond my competence. I will only be responsible for what depends on me.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Launch</div>
+          <p>Once development is complete. I will explain everything regarding your application and provide video tutorials where necessary. We will then perform a final check of functionality and application content before launching the product. Any changes and ammendments which go beyond the initial scope of work will attract an additional charge.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon"><span>&#10003;</span></div>
+          <div class="process-title">Technical support</div>
+          <p>I provide free technical support for the first three months after launch of the product. After which technical support will be at an agreed upon additional charge.</p>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
   <div class="page-end">
     <h1>let's do something amazing 
       <a href="{% url 'contact' %}">
         <span class="d-block span-hover">get in touch
-          <span class="bi bi-arrow-up-right">
+          <sup class="bi bi-arrow-up-right">
             &nearr;
-          </span>
+          </sup>
         </span>
       </a>
     </h1>
   </div>
 </div>
-
 {%endblock%}

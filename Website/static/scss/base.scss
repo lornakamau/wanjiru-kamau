@@ -188,12 +188,13 @@ button {
   }
   .bi-arrow-up-right {
     margin-left: 1rem;
-    position: absolute;
+    // position: absolute;
     font-size: 4vh;
+    vertical-align: middle !important;
     transition: 0.4s;
-    font-weight: 700;
+    // font-weight: 700;
     transition-timing-function: ease-in-out;
-    padding: 2%;
+    // padding: 2%;
     transform: rotate(20deg);
   }
 }

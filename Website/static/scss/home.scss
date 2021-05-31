@@ -1,7 +1,7 @@
 .landing {
   height: 200vh;
   background-color: #fff;
-  .containers {
+  .landing-container {
     margin: 0 auto;
     position: relative;
     .landing-logo {
@@ -44,7 +44,8 @@
       z-index: 1;
       width: 20vw;
       p {
-        line-height: 1.5;
+        line-height: 1.4rem;
+        font-size: .8rem;
       }
     }
   }
@@ -62,7 +63,7 @@
 }
 
 #projects {
-  h2{
+  h2 {
     color: #bf0603;
     font-size: 4.5vw;
     margin-left: 8.33333%;
@@ -217,3 +218,38 @@
   }
 }
 
+#process{
+  h2 {
+    color: #bf0603;
+    font-size: 4.5vw;
+    margin-left: 8.33333%;
+    font-weight: 500;
+    font-family: "Nanum Myeongjo", serif;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+  .process-card{
+    text-align: center !important;
+    margin-bottom: 7rem;
+    .process-icon{
+      width: 3vh;
+      height: 3vh;
+      font-size: 2.5vh;
+      border: 1px solid;
+      border-radius: 50%;
+      display: flex;
+      margin: 0 auto;
+      span{
+        margin: 0 auto;
+      }
+    }
+    .process-title{
+      text-transform: uppercase;
+      margin: 1rem 0 2rem;
+      font-size: 0.8rem;
+    }
+    p{
+      line-height: 2rem;
+    }
+  }
+}
